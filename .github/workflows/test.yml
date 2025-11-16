@@ -5,19 +5,18 @@ on:
     branches:
       - main
   pull_request:
-    branches: -main
+    branches:
+      - main
 
 jobs:
   read_the_file:
     runs-on: ubuntu-latest
 
     steps:
-        - name: Git Checkout
-        users: actions/checkout@v2
+      - name: Git Checkout
+        uses: actions/checkout@v2
 
-        -name: Read File
-        runs: |
+      - name: Read File
+        run: |
           ls -l
           cat ./path/to/your/file.txt
-
-         
