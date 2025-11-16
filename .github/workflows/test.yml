@@ -19,4 +19,4 @@ jobs:
       - name: Read File
         run: |
           ls -l
-          cat ./path/to/your/file.txt
+          cat app/routes/home.tsx
