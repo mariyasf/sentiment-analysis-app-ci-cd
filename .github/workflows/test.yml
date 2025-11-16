@@ -1,0 +1,24 @@
+name: Test ci/cd
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches: -main
+
+jobs:
+  read_the_file:
+    runs-on: ubuntu-latest
+
+    steps:
+        - name: Git Checkout
+        users: actions/checkout@v2
+
+        -name: Read File
+        runs: |
+          ls -l
+          cat ./path/to/your/file.txt
+
+         
+g
